@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE = edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="static/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( ".slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 3000,
+            values: [ 300, 1300 ],
+            slide: function( event, ui ) {
+                $( ".amount" ).val(ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+            }
+            });
+            $( ".amount" ).val($( ".slider-range" ).slider( "values", 0 ) +
+            " - " + $( ".slider-range" ).slider( "values", 1 ) );
+        } );
+    </script>
+    <title>Главная страница</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="flex-container">
+        <div class="flex-item-child__1">
+          <div class="gx__filter">
+            <div class="gx__title"><span>Git Xplore</span></div>
+            <div class="gx__filter-title"><span class="filter-text">Language</span></div>
+            <div class="gx__filter-item">
+              <span class="filter-selector">Select ...</span>
+              <ul class="filter__list">
+                <li><a href="javascript:void(0);">JavaScript</a></li>
+                <li><a href="javascript:void(0);">Java</a></li>
+                <li><a href="javascript:void(0);">Python</a></li>
+                <li><a href="javascript:void(0);">Ruby</a></li>
+              </ul>
+            </div>
+            <div class="gx__filter-title"><span class="filter-text">Repo Tags</span></div>
+            <div class="gx__filter-item"><span class="filter-selector">Select ...</span>
+              <ul class="filter__list">
+                <li><a href="javascript:void(0);">python</a></li>
+                <li><a href="javascript:void(0);">ios</a></li>
+                <li><a href="javascript:void(0);">android</a></li>
+                <li><a href="javascript:void(0);">javascript</a></li>
+              </ul>
+            </div>
+            <div class="gx__filter-title"><span class="filter-text">Last Active</span></div>
+            <div class="gx__filter-item"><span class="filter-selector">Select ...</span>
+              <ul class="filter__list">
+                <li><a href="javascript:void(0);">Last 30 days</a></li>
+                <li><a href="javascript:void(0);">Last 6 nonths</a></li>
+                <li><a href="javascript:void(0);">Last year</a></li>
+              </ul>
+            </div>
+            <div class="gx__filter-title"><span class="filter-text">Created</span></div>
+            <div class="gx__filter-item"><span class="filter-selector">Select ...</span>
+              <ul class="filter__list">
+                <li><a href="javascript:void(0);">Last year</a></li>
+                <li><a href="javascript:void(0);">Last 3 years</a></li>
+                <li><a href="javascript:void(0);">All time</a></li>
+              </ul>
+            </div>
+            <div class="gx__filter-title">                
+                <span class="filter-text">Repo Stars</span>
+            </div>
+            <div class="gx__filter-slider">
+                <p>
+                    <label for="amount"></label>
+                    <input type="text" class="amount">
+                </p> 
+                <div class="slider-range"></div>
+            </div>
+            <div class="gx__filter-title">                
+                <span class="filter-text">Repo Forks</span>
+            </div>
+            <div class="gx__filter-slider">
+                <p>
+                    <label for="amount"></label>
+                    <input type="text" class="amount">
+                </p> 
+                <div class="slider-range"></div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item-child__2">
+          <div class="general-search">
+            <input type="text" placeholder="Search"><span class="general-search__icon"></span>
+          </div>
+          <div class="container">
+            <div class="product-item">
+              <div class="product-item__title">
+                <img src="static/img/content/freeCodeCamp.png">
+                <span class="products-title"><a class="products-title__source" href="">freeCodeCamp/freeCodeCamp</a></span>
+              </div>
+              <span class="products-hashtag">
+                <a class="products-hashtag1" href="">#education</a>
+                <a class="products-hashtag2" href="">#community</a>
+              </span>
+              <span class="buttons">
+                <a class="rating" href="">
+                  <img src="static/img/content/buttons/rate-star-button.png">
+                  <span class="rating-text">290898</span>
+                </a>
+                <a class="rating" href="">
+                  <img src="static/img/content/buttons/share.png">
+                  <span class="rating-text">12319</span>
+                </a>
+                <a class="rating" href="">
+                  <img src="static/img/content/buttons/view.png">
+                  <span class="rating-text">8577</span>
+                </a>
+              </span>
+            </div>
+            <div class="product-item">
+              <div class="product-item__title">
+                <img src="static/img/content/syl20bnr.png">
+                <span class="products-title"><a href="">syl20bnr/spacemacs</a></span>
+              </div>
+              <span class="products-hashtag">
+                <a class="products-hashtag1" href="">#bootsrtap</a>
+                <a class="products-hashtag2" href="">#javascript</a>
+              </span>
+              <span class="buttons">
+                <a class="rating" href="">
+                  <img src="static/img/content/buttons/rate-star-button.png">
+                  <span class="rating-text">112092</span>
+                </a>
+                <a class="rating" href="">
+                  <img src="static/img/content/buttons/share.png">
+                  <span class="rating-text">51847</span>
+                </a>
+                <a class="rating" href="">
+                  <img src="static/img/content/buttons/view.png">
+                  <span class="rating-text">7003</span>
+                </a>
+              </span>
+            </div>
+            <div class="product-item">
+              <div class="product-item__title">
+                <img src="static/img/content/PerfectlySoft.png">
+                <span class="products-title"><a href="">PerfectlySoft/Perfect</a></span>
+              </div>
+              <span class="products-hashtag">
+                <a class="products-hashtag1" href="">#education</a>
+                <a class="products-hashtag2" href="">#resource</a>
+              </span>
+              <span class="buttons">
+                <a class="rating" href="">
+                  <img src="static/img/content/buttons/rate-star-button.png">
+                  <span class="rating-text">88004</span>
+                </a>
+                <a class="rating" href="">
+                  <img src="static/img/content/buttons/share.png">
+                  <span class="rating-text">22038</span>
+                </a>
+                <a class="rating" href="">
+                  <img src="static/img/content/buttons/view.png">
+                  <span class="rating-text">6532</span>
+                </a>
+              </span>
+            </div>
+            <div class="product-item">
+              <div class="product-item__title">
+                <img src="static/img/content/NodeBB.png">
+                <span class="products-title"><a href="">NodeBB/NodeBB</a></span>
+              </div>
+              <span class="products-hashtag">
+                <a class="products-hashtag2" href="">#community</a>
+              </span>
+              <span class="buttons">
+                <a class="rating" href="">
+                  <img src="static/img/content/buttons/rate-star-button.png">
+                  <span class="rating-text">69783</span>
+                </a>
+                <a class="rating" href="">
+                  <img src="static/img/content/buttons/share.png">
+                  <span class="rating-text">13075</span>
+                </a>
+                <a class="rating" href="">
+                  <img src="static/img/content/buttons/view.png">
+                  <span class="rating-text">4684</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/libs.min.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>
